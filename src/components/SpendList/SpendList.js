@@ -9,6 +9,8 @@ const SpendList = () => {
     { name: "Movil", amount: 30, id: 3 },
   ]);
 
+
+  
   //hooking to objects -  the storage area for states:
   const [newSpend, setNewSpend] = React.useState({
     name: "",
@@ -49,6 +51,8 @@ const SpendList = () => {
       {spendList.map((spend) => (
         <SpendItem key={spend.id} spend={spend}></SpendItem>
       ))}
+
+
 
       {/*Add expenses form*/}
       <h2 className="spend-list__title">Añadir nuevo gasto</h2>
@@ -91,6 +95,8 @@ const SpendList = () => {
             }
           />
         </p>
+        
+        
         <button className="spend-list__form-field--submit" type="submit">
           Añadir gasto
         </button>
