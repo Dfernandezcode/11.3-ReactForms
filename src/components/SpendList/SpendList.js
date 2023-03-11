@@ -2,7 +2,7 @@ import React from "react";
 import SpendItem from "../SpendItem.js/SpendItem";
 import "./SpendList.css";
 
-const SpendList = () => {
+const SpendList = React.Memo(() => {
   const [spendList, setSpendList] = React.useState([
     { name: "Gasolina", amount: 200, id: 1 },
     { name: "Netflix", amount: 15, id: 2 },
@@ -103,6 +103,6 @@ const SpendList = () => {
       </form>
     </div>
   );
-};
+});
 
 export default SpendList;
